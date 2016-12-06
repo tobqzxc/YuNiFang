@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--框架-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--查询视图-->
+
+        <!--展示图片-->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350px"
+            android:orientation="horizontal">
+            <!--左-->
+            <ImageView
+                android:id="@+id/cate_iv_big"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:src="@mipmap/classify_facial_mask" />
+            <!--右-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:padding="10px">
+                <!--第一行-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal"
+                    android:padding="10px">
+
+                    <ImageView
+                        android:id="@+id/cate_iv_online_first"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5px"
+                        android:layout_weight="1"
+                        android:src="@mipmap/classify_emollient_water" />
+
+                    <ImageView
+                        android:id="@+id/cate_iv_online_second"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5px"
+                        android:layout_weight="1"
+                        android:src="@mipmap/classify_body_lotion" />
+                </com.zhy.autolayout.AutoLinearLayout>
+                <!--第二行-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.3"
+                    android:padding="10px">
+
+                    <ImageView
+                        android:id="@+id/cate_iv_twoline_first"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5px"
+                        android:layout_weight="1"
+                        android:src="@mipmap/classify_facial_cleanser" />
+
+                    <ImageView
+                        android:id="@+id/cate_iv_twoline_second"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5px"
+                        android:layout_weight="1"
+                        android:src="@mipmap/classify_other" />
+                </com.zhy.autolayout.AutoLinearLayout>
+                <!--第三行-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.3">
+
+                    <ImageView
+                        android:id="@+id/cate_iv_threeline_only"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/classify_kit" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <!--分割背景线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15px"
+            android:layout_marginTop="40px"
+            android:background="#cfcfcf"></View>
+
+        <!--按功效-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10px"
+            android:text="--  按功效  --"
+            android:textColor="#000" />
+        <!--美丽从现在开始-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10px"
+            android:text="  美丽从现在开始  "
+            android:textColor="#000"
+            android:textSize="20px" />
+
+        <!--横向展示-->
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:src="@mipmap/classify_hydrating" />
+
+            <ImageView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:src="@mipmap/classify_soothing" />
+
+            <ImageView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:src="@mipmap/classify_control_oil" />
+
+            <ImageView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:src="@mipmap/classify_whitening" />
+
+            <ImageView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                android:src="@mipmap/classify_firming" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <!--分割背景线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15px"
+            android:layout_marginTop="40px"
+            android:background="#cfcfcf"></View>
+        <!--按肤质-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10px"
+            android:text="--  按肤质  --"
+            android:textColor="#000" />
+        <!--适合自己的才是最好-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10px"
+            android:text="  适合自己的才是最好  "
+            android:textColor="#000"
+            android:textSize="20px" />
+
+        <!--肤质介绍-->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:orientation="horizontal">
+            <!--左-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:text="#混合性物质#"
+                    android:background="#DEDEB9"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_margin="10px"
+                    android:text="#干性肤质#"
+                    android:layout_weight="1"
+                    android:background="#D4D7F7"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:text="#痘痘肤质#"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:background="#F1D2CB"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+            <!--右-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="#中性肤质#"
+                    android:layout_height="0px"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:background="#EED4C2"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_margin="10px"
+                    android:background="#D1E1C3"
+                    android:text="#油性肤质#"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:background="#BFF1EC"
+                    android:text="#敏感肤质#"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#fff" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <!--明星产品-->
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_gravity="center"
+                android:src="@mipmap/classify_triangle"
+                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:textColor="#000"
+            android:text="明星产品"
+            android:gravity="center"
+            />
+        </com.zhy.autolayout.AutoFrameLayout>
+
+        <!--GridView商品展示-->
+        <com.example.qwe.yunifang.view.MyGridView
+            android:id="@+id/cate_iv_gv"
+            android:padding="10px"
+            android:layout_width="match_parent"
+            android:numColumns="2"
+            android:layout_height="wrap_content"></com.example.qwe.yunifang.view.MyGridView>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</ScrollView>

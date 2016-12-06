@@ -1,4 +1,4 @@
-package com.example.qwe.yunifang;
+package com.example.qwe.yunifang.lanuch;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -6,6 +6,9 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+
+import com.example.qwe.yunifang.NavigationActivity;
+import com.example.qwe.yunifang.R;
 
 public class LanuchActivity extends AppCompatActivity {
     private Handler handler = new Handler() {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border"
+    android:orientation="vertical"
+    android:layout_marginLeft="10px"
+    android:padding="20px">
+
+    <ImageView
+        android:id="@+id/last_iv"
+        android:layout_width="300px"
+        android:layout_height="300px" />
+
+    <TextView
+        android:id="@+id/last_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45464"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/last_tv_content"
+        android:layout_width="wrap_content"
+        android:lines="2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="45464" />
+
+    <TextView
+        android:id="@+id/last_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="45464" />
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -188,7 +188,7 @@ public abstract class BaseData {
         OkHttpClient mOkHttpClient = new OkHttpClient();
         //创建一个Request
         final Request request = new Request.Builder()
-                .url(path + "?" + args)
+                .url(path + args)
                 .build();
         //new call
         Call call = mOkHttpClient.newCall(request);

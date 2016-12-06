@@ -13,21 +13,25 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="design_width"
-            android:value="768"/>
+            android:value="768" />
         <meta-data
             android:name="design_height"
-            android:value="1280"/>
+            android:value="1280" />
 
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LanuchActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lanuch.LanuchActivity" />
         <activity android:name=".NavigationActivity" />
-        <activity android:name=".LocateActivity"></activity>
+        <activity android:name=".lanuch.LocateActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ProductShowActivity" />
+        <activity android:name=".DescriptionActivity" />
+        <activity android:name=".ProductDetailsActivity"></activity>
     </application>
 
 </manifest>

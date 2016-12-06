@@ -28,14 +28,21 @@ public class NoScrollViewPager extends ViewPager {
         return false;
     }
 
+
+
+
     /**
      * 不阻断
-     * @param event
+     * @param
      * @return
      */
-
     @Override
-    public boolean onInterceptHoverEvent(MotionEvent event) {
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
         return false;
     }
+
+    //    @Override
+//    public boolean onInterceptHoverEvent(MotionEvent event) {
+//        return false;
+//    }
 }

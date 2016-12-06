@@ -10,8 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.qwe.yunifang.R;
+import com.example.qwe.yunifang.RegisterActivity;
 import com.example.qwe.yunifang.utlis.CommonUtils;
-import com.example.qwe.yunifang.LocateActivity;
+import com.example.qwe.yunifang.lanuch.LocateActivity;
 
 /**
  * Created by qwe on 2016/11/28.
@@ -19,6 +20,7 @@ import com.example.qwe.yunifang.LocateActivity;
 public class MineFragment extends Fragment implements View.OnClickListener {
 
     private Button locate;
+    private Button entry;
 
     @Nullable
     @Override
@@ -36,11 +38,13 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
     private void initeLister() {
         locate.setOnClickListener(this);
+        entry.setOnClickListener(this);
 
     }
 
     private void initView(View view) {
         locate = (Button) view.findViewById(R.id.locate);
+        entry = (Button) view.findViewById(R.id.entry);
     }
 
     @Override
@@ -50,6 +54,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             case R.id.locate:
                 Intent in = new Intent(getActivity(), LocateActivity.class);
                 startActivity(in);
+                getActivity().overridePendingTransition(R.anim.activity_in,R.anim.activity_out);
+                break;
+            case R.id.entry:
+                Intent intent = new Intent(getActivity(), RegisterActivity.class);
+                startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.activity_in,R.anim.activity_out);
                 break;
         }

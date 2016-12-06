@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--头部标题-->
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:padding="20px">
+
+        <TextView
+            android:id="@+id/tv_product_title"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="商品详情" />
+
+        <ImageView
+            android:id="@+id/iv_product_back"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/back_normal" />
+    </com.zhy.autolayout.AutoFrameLayout>
+    <!--尾部（购买菜单）-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_product_last"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:src="@mipmap/public_contact_service_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:paddingBottom="10px"
+                android:paddingTop="10px"
+                android:text="客服" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <!--加入购物车-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0"
+            android:text="加入购物车"
+            android:textColor="#fff" />
+        <!--立即购买-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_true"
+            android:text="立即购买"
+            android:textColor="#fff" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_product_last"
+        android:layout_below="@+id/product_title">
+
+        <!--框架-->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--广告页-->
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500px">
+                <com.example.qwe.yunifang.view.MyRoolViewPager
+                    android:id="@+id/vp_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="500px">
+                </com.example.qwe.yunifang.view.MyRoolViewPager>
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/ll_product_dots"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <!--分割背景线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#cfcfcf"></View>
+            <!--商品名称   以及  收藏-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_product_details_title"
+                    android:layout_width="0dp"
+                    android:layout_height="80px"
+                    android:layout_weight="1"
+                   android:layout_marginTop="30px"
+                    android:text="新品面膜 阿萨德库啊谁看得见按时" />
+
+                <CheckBox
+                    android:id="@+id/cb_partculars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10px"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableTop="@drawable/collection_selector"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="收藏" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_marginLeft="20px"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <TextView
+                    android:id="@+id/tv_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="￥:59.90"
+                    android:textColor="@color/color_true"
+                    android:textSize="40px" />
+
+                <ImageView
+                    android:id="@+id/iv_product_juan"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20px"
+                    android:layout_toRightOf="@+id/tv_product_price"
+                    android:src="@mipmap/coupons" />
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20px"
+                    android:layout_toRightOf="@+id/iv_product_juan"
+                    android:src="@mipmap/pledge" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <!--运费 快递情况-->
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20px"
+                android:layout_height="60px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="运费 包邮"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="销量 156"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="收藏 213"
+                    android:layout_marginRight="20px"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent" />
+            </com.zhy.autolayout.AutoLinearLayout>
+            <!--分割背景线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#cfcfcf"></View>
+
+            <!--展示第一条-->
+            <com.example.qwe.yunifang.view.MyListView
+                android:id="@+id/lv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.example.qwe.yunifang.view.MyListView>
+
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

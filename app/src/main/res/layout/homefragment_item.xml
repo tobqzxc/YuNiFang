@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="御泥坊VIP商城"
+        android:textColor="@color/colorAccent" />
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/sv_spring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--框架-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- viewpager + button -->
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400px">
+                    <com.example.qwe.yunifang.view.MyRoolViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="400px"></com.example.qwe.yunifang.view.MyRoolViewPager>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/ll_dots"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20px"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoRelativeLayout>
+                <!--GirdView 展示-->
+                <GridView
+                    android:id="@+id/gv_content"
+                    android:numColumns="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="270px"></GridView>
+                <!--分割线-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_below="@+id/locate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px">
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#cfcfcf"
+                        android:layout_height="1px"></View>
+                </com.zhy.autolayout.AutoLinearLayout>
+                <!--分割背景线-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#cfcfcf"
+                        android:layout_height="5px"></View>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <!--横向展示-->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/hsv_linear"
+                        android:layout_width="1000px"
+                        android:layout_height="wrap_content"></com.zhy.autolayout.AutoLinearLayout>
+                </HorizontalScrollView>
+
+                <!--分割背景线-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#cfcfcf"
+                        android:layout_height="5px"></View>
+                </com.zhy.autolayout.AutoLinearLayout>
+                <!--优惠活动-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="-- 优惠活动 --"
+                    android:gravity="center"
+                    android:layout_height="40px" />
+                <com.zhy.autolayout.AutoFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250px"
+                    android:clipChildren="false"
+                    android:layout_centerInParent="true"
+
+                    >
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/home_vp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="160px"
+                    android:layout_marginRight="160px"
+                    android:clipChildren="false"
+                    android:layout_height="200px"></android.support.v4.view.ViewPager>
+                </com.zhy.autolayout.AutoFrameLayout>
+
+                <!--热门专题-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="-- 热门专题 --"
+                    android:gravity="center"
+                    android:layout_height="40px" />
+                <com.example.qwe.yunifang.view.Home_ListView
+                    android:id="@+id/lv_rm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.example.qwe.yunifang.view.Home_ListView>
+                <!--分割背景线-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#cfcfcf"
+                        android:layout_height="5px"></View>
+                </com.zhy.autolayout.AutoLinearLayout>
+            <!--GridView商品展示-->
+                <com.example.qwe.yunifang.view.MyGridView
+                    android:id="@+id/more_gv"
+                    android:padding="10px"
+                    android:layout_width="match_parent"
+                    android:numColumns="2"
+                    android:layout_height="wrap_content"></com.example.qwe.yunifang.view.MyGridView>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+        </ScrollView>
+
+
+    </com.liaoinstan.springview.widget.SpringView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

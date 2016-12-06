@@ -22,23 +22,14 @@ public abstract class BaseFragment extends Fragment {
         showingPage = new ShowingPage(getContext()) {
             @Override
             protected void onload() {
-                new Thread(){
-                    @Override
-                    public void run() {
-                        try {
-                            sleep(500);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                BaseFragment.this.onload();
-                    }
-                }.start();
             }
+
             @Override
             public View createSuccessView() {
                 return BaseFragment.this.createSuccessView();
             }
         };
+        BaseFragment.this.onload();
         return showingPage;
     }
 

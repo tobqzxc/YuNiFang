@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="mineItemBgPress">#cfcfcfcf</color>
     <color name="colorWrite">#ffffffff</color>
+    <color name="registerchecked">#ffffffff</color>
+    <color name="no_registerchecked">#00000000</color>
+    <color name="color_true">#fc6b87</color>
+
 </resources>
