@@ -15,9 +15,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.qwe.yunifang.DescriptionActivity;
+import com.example.qwe.yunifang.AllGoodsActivity;
 import com.example.qwe.yunifang.ProductShowActivity;
 import com.example.qwe.yunifang.R;
 import com.example.qwe.yunifang.adapter.MyGridAdapter;
@@ -34,6 +33,8 @@ import com.example.qwe.yunifang.view.MyRoolViewPager;
 import com.example.qwe.yunifang.view.ScalePageTransformer;
 import com.example.qwe.yunifang.view.ShowingPage;
 import com.google.gson.Gson;
+import com.liaoinstan.springview.container.DefaultFooter;
+import com.liaoinstan.springview.container.DefaultHeader;
 import com.liaoinstan.springview.widget.SpringView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zhy.autolayout.AutoLinearLayout;
@@ -59,6 +60,7 @@ public class HomeFragment extends BaseFragment implements SpringView.OnFreshList
     private ListView lv_rm;
     private GridView more_gv;
     private ViewPager home_vp;
+    private View tv_home_look;
 
     @Override
     protected void onload() {
@@ -74,6 +76,7 @@ public class HomeFragment extends BaseFragment implements SpringView.OnFreshList
         initView();
         // 初始化轮播图
         initRollViewPager();
+        initHsvGv();
         // 添加GridView
         initGrid();
         //设置ViewPager广告页
@@ -118,10 +121,10 @@ public class HomeFragment extends BaseFragment implements SpringView.OnFreshList
                 container.removeView((View) object);
             }
         });
-        home_vp.setCurrentItem(1000*activityInfoList.size());
+        home_vp.setCurrentItem(1000 * activityInfoList.size());
         home_vp.setPageMargin(20);
         home_vp.setOffscreenPageLimit(3);
-        home_vp.setPageTransformer(true,new ScalePageTransformer());
+        home_vp.setPageTransformer(true, new ScalePageTransformer());
     }
 
     /**
@@ -260,18 +263,33 @@ public class HomeFragment extends BaseFragment implements SpringView.OnFreshList
         lv_rm = (ListView) view.findViewById(R.id.lv_rm);
         more_gv = (GridView) view.findViewById(R.id.more_gv);
         home_vp = (ViewPager) view.findViewById(R.id.home_vp);
+        tv_home_look = view.findViewById(R.id.tv_home_look);
         sv_spring.setListener(this);
+        sv_spring.setHeader(new DefaultHeader(getActivity()));
+       // sv_spring.setFooter(new DefaultFooter(getContext()));
+        tv_home_look.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), AllGoodsActivity.class);
+                startActivity(in);
+            }
+        });
         return view;
     }
 
     @Override
     public void onRefresh() {
-
+        lode();
     }
 
     @Override
     public void onLoadmore() {
+        lode();
+    }
 
+    //停止刷新
+    public void lode() {
+        sv_spring.scrollTo(0, 0);
     }
 
     class MyHomeData extends BaseData {

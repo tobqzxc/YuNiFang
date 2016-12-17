@@ -58,6 +58,7 @@
         </com.zhy.autolayout.AutoLinearLayout>
         <!--加入购物车-->
         <Button
+            android:id="@+id/btn_product_join"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#ff0"
@@ -65,6 +66,7 @@
             android:textColor="#fff" />
         <!--立即购买-->
         <Button
+            android:id="@+id/btn_product_join_buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/color_true"
@@ -73,7 +75,50 @@
 
     </com.zhy.autolayout.AutoLinearLayout>
 
-    <ScrollView
+    <RadioGroup
+        android:id="@+id/rg_product_one"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@+id/product_title"
+        android:orientation="horizontal"
+        android:visibility="gone"   >
+
+        <RadioButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:textColor="@color/color_true"
+            android:gravity="center"
+            android:text="产品详情" />
+
+        <RadioButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:textColor="#000"
+            android:button="@null"
+            android:gravity="center"
+            android:text="产品参数" />
+
+        <RadioButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:textColor="#000"
+            android:button="@null"
+            android:gravity="center"
+            android:text="评论" />
+    </RadioGroup>
+
+    <com.example.qwe.yunifang.view.MyScrollView
+        android:id="@+id/sv_product"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/ll_product_last"
@@ -88,18 +133,18 @@
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="500px">
+
                 <com.example.qwe.yunifang.view.MyRoolViewPager
                     android:id="@+id/vp_product_details"
                     android:layout_width="match_parent"
-                    android:layout_height="500px">
-                </com.example.qwe.yunifang.view.MyRoolViewPager>
+                    android:layout_height="500px"></com.example.qwe.yunifang.view.MyRoolViewPager>
+
                 <com.zhy.autolayout.AutoLinearLayout
                     android:id="@+id/ll_product_dots"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_height="wrap_content">
-                </com.zhy.autolayout.AutoLinearLayout>
+                    android:layout_centerHorizontal="true"></com.zhy.autolayout.AutoLinearLayout>
             </com.zhy.autolayout.AutoRelativeLayout>
 
             <!--分割背景线-->
@@ -118,8 +163,8 @@
                     android:id="@+id/tv_product_details_title"
                     android:layout_width="0dp"
                     android:layout_height="80px"
+                    android:layout_marginTop="30px"
                     android:layout_weight="1"
-                   android:layout_marginTop="30px"
                     android:text="新品面膜 阿萨德库啊谁看得见按时" />
 
                 <CheckBox
@@ -137,9 +182,9 @@
             </com.zhy.autolayout.AutoLinearLayout>
 
             <com.zhy.autolayout.AutoRelativeLayout
-                android:layout_marginLeft="20px"
                 android:layout_width="match_parent"
-                android:layout_height="60px">
+                android:layout_height="60px"
+                android:layout_marginLeft="20px">
 
                 <TextView
                     android:id="@+id/tv_product_price"
@@ -172,29 +217,31 @@
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="60px"
                 android:layout_marginLeft="20px"
-                android:layout_height="60px">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="运费 包邮"
-                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent" />
+                    android:gravity="center_vertical"
+                    android:text="运费 包邮" />
+
                 <TextView
                     android:layout_width="0dp"
-                    android:gravity="center"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="销量 156"
-                    android:layout_height="match_parent" />
+                    android:gravity="center"
+                    android:text="销量 156" />
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="收藏 213"
-                    android:layout_marginRight="20px"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent" />
+                    android:layout_marginRight="20px"
+                    android:gravity="center_vertical"
+                    android:text="收藏 213" />
             </com.zhy.autolayout.AutoLinearLayout>
             <!--分割背景线-->
             <View
@@ -202,17 +249,52 @@
                 android:layout_height="5px"
                 android:background="#cfcfcf"></View>
 
-            <!--展示第一条-->
+            <!--展示数据-->
             <com.example.qwe.yunifang.view.MyListView
                 android:id="@+id/lv_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></com.example.qwe.yunifang.view.MyListView>
+            <!--相关评论条目-->
+            <RadioGroup
+                android:id="@+id/rg_product_two"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80px">
 
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_true"
+                    android:gravity="center"
+                    android:text="产品详情" />
 
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="产品参数" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="评论" />
+            </RadioGroup>
+            <!--展示数据-->
+            <com.example.qwe.yunifang.view.MyListView
+                android:id="@+id/lv_product_show"
+                android:layout_width="match_parent"
+                android:layout_height="1000px"></com.example.qwe.yunifang.view.MyListView>
 
         </com.zhy.autolayout.AutoLinearLayout>
-
-    </ScrollView>
-
+    </com.example.qwe.yunifang.view.MyScrollView>
 
 </com.zhy.autolayout.AutoRelativeLayout>

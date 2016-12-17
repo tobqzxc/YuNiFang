@@ -196,6 +196,8 @@ public abstract class BaseData {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
+                System.out.println(request);
+                System.out.println(e.toString());
             }
 
             @Override

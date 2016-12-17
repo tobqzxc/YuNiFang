@@ -18,6 +18,7 @@ public class MyApplication extends Application {
     private static Context context;
     private static Handler handler;
     private static int mainThreadId;
+    public static boolean intentFlag = false;
 
     @Override
     public void onCreate() {

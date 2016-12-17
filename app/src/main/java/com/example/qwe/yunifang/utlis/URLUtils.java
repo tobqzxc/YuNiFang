@@ -12,6 +12,10 @@ public class URLUtils {
     public static final String categoryArgs="?random=60729&encode=d5f7520dad446ad974110b1b2cb499c8";
     //商品详情（id）
     public static final String productDetails="http://m.yunifang.com/yunifang/mobile/goods/detail?random=6716&encode=b02382bd9e457e06e09b68a6a4f26eb4&id=";
+    //查看所有商品
+   public static final String AllGoodsUrl="http://m.yunifang.com/yunifang/mobile/goods/getall?random=87749&encode=ac6bd45b8f50b626a6843b294af8fed5";
+    //    商品分类（category_id值从分类里获取）
+   public static final String CategoryShow=" http://m.yunifang.com/yunifang/mobile/goods/getall?random=92414&encode=33984fb43bc319ca16f9b7efb4baf895&category_id=";
 
 
 //    返回数据：json串
@@ -55,10 +59,8 @@ public class URLUtils {
 //    凑单专区 凑单满减更优惠
 //    http://m.yunifang.com/yunifang/mobile/goodsGroup/detail?random=98623&encode=95abc3d3daed57335718d56fb4813d6a&id=149
 //
-//    查看所有商品
-//    http://m.yunifang.com/yunifang/mobile/goods/getall?random=87749&encode=ac6bd45b8f50b626a6843b294af8fed5
-//    商品分类（category_id值从分类里获取）
-//    http://m.yunifang.com/yunifang/mobile/goods/getall?random=92414&encode=33984fb43bc319ca16f9b7efb4baf895&category_id=
+
+
 //    加入购物车
 //    http://m.yunifang.com/yunifang/mobile/cart/add?random=16229&encode=b7b2631514198a974adeac655eaca692
 //    查看购物车

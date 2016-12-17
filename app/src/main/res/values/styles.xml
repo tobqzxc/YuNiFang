@@ -16,6 +16,18 @@
         <item name="android:windowExitAnimation">@anim/hide_translate</item>
         <!-- 指定消失的动画xml -->
     </style>
+    <!-- popupwindow动画-->
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_out</item>
+    </style>
+
+    <style name="Popupwindow">
+        <item name="android:windowEnterAnimation">@anim/window_out</item>
+        <item name="android:windowExitAnimation">@anim/window_back</item>
+    </style>
+
+
 
 
 </resources>

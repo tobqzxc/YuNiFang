@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:id="@+id/cart_pop_image"
+            android:layout_margin="10px"/>
+        
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_height="200px"
+            android:layout_weight="1"
+            android:padding="10px"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="321"
+                android:gravity="center"
+                android:id="@+id/pop_show_price"
+                android:textColor="@color/color_true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="321"
+                android:gravity="center_vertical"
+                android:id="@+id/stock_number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="321"
+                android:gravity="center_vertical"
+                android:id="@+id/restrict_purchase_num"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:text="购买数量"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10px"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/share_square"
+                android:text="一"
+                android:id="@+id/reduce_number"
+                android:textColor="#000"/>
+
+            <Button
+                android:layout_width="70px"
+                android:layout_height="50px"
+                android:background="@drawable/share_square"
+                android:id="@+id/show_number"
+                android:text="1"
+                android:textColor="#000"/>
+
+            <Button
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/share_square"
+                android:text="十"
+                android:id="@+id/add_number"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_cart_sure_popup"
+        android:text="确定"
+        android:textColor="#fff"
+        android:id="@+id/cart_pop_sure_button"/>
+</com.zhy.autolayout.AutoLinearLayout>

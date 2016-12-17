@@ -13,7 +13,7 @@
         android:text="第三方快速登录"
         android:textColor="#FC6B87"
         android:textSize="20sp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="30px"
         />
 
     <TextView
@@ -21,20 +21,20 @@
         android:layout_height="wrap_content"
         android:text="第三方快速登录用户不享受任何御泥坊会员权益"
         android:textColor="#A09D9E"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10px"
         />
 0
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150px"
         android:background="#fff"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30px"
         >
         <RadioButton
             android:button="@null"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="left"
             android:drawableTop="@drawable/qqbutton_selector"
@@ -42,8 +42,8 @@
             />
 
         <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
             android:drawableTop="@drawable/sinabutton_selector"
@@ -52,15 +52,15 @@
             />
 
         <RadioButton
-            android:layout_width="0dp"
+            android:layout_width="0px"
             android:button="@null"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
            android:drawableTop="@drawable/wechatbutton_selector"
             android:id="@+id/wechat_land"
             />
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
 
 </com.zhy.autolayout.AutoLinearLayout>

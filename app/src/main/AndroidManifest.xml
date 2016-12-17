@@ -21,17 +21,20 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lanuch.LanuchActivity" />
+        <activity android:name=".lanuch.LanuchActivity">
+        </activity>
         <activity android:name=".NavigationActivity" />
         <activity android:name=".lanuch.LocateActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ProductShowActivity" />
         <activity android:name=".DescriptionActivity" />
-        <activity android:name=".ProductDetailsActivity"></activity>
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".AllGoodsActivity" />
+        <activity android:name=".CategoryShowActivity" />
+        <activity android:name=".CategoryTypeActivity"></activity>
     </application>
 
 </manifest>

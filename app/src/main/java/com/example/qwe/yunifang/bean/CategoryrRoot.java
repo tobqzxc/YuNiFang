@@ -1,11 +1,12 @@
 package com.example.qwe.yunifang.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by qwe on 2016/12/3.
  */
-public class CategoryrRoot {
+public class CategoryrRoot implements Serializable {
 
     /**
      * code : 200
@@ -41,7 +42,7 @@ public class CategoryrRoot {
         return data;
     }
 
-    public static class DataEntity {
+    public static class DataEntity implements Serializable {
         /**
          * id : 16
          * cat_name : 按功效
@@ -78,7 +79,7 @@ public class CategoryrRoot {
             return goodsBrief;
         }
 
-        public static class CategoryEntity {
+        public static class CategoryEntity implements Serializable {
             private String id;
             private String cat_name;
             private String is_leaf;
@@ -122,7 +123,7 @@ public class CategoryrRoot {
                 return children;
             }
 
-            public static class ChildrenEntity {
+            public static class ChildrenEntity implements Serializable {
                 private String id;
                 private String cat_name;
                 private String is_leaf;

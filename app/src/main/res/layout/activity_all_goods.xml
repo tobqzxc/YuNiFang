@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RadioGroup
+        android:id="@+id/rg_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="默认排序"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/button_underline"
+            android:textColor="@color/color_true"
+            android:id="@+id/price_normal"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="价格升序"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_above"
+            android:background="@null"
+            android:id="@+id/price_up"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="价格降序"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_below"
+            android:background="@null"
+            android:id="@+id/price_down"
+            />
+    </RadioGroup>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"
+            ></android.support.v7.widget.RecyclerView>
+
+    </com.liaoinstan.springview.widget.SpringView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

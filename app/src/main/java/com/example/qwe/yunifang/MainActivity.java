@@ -1,13 +1,16 @@
 package com.example.qwe.yunifang;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.qwe.yunifang.app.MyApplication;
 import com.example.qwe.yunifang.factory.FragmentFactory;
 import com.example.qwe.yunifang.view.ShowingPage;
 import com.zhy.autolayout.AutoLayoutActivity;
@@ -16,8 +19,9 @@ import com.zhy.autolayout.AutoLayoutActivity;
 public class MainActivity extends AutoLayoutActivity {
 
     private ShowingPage showingPage;
-    private ViewPager viewPager;
-    private RadioGroup radioGroup;
+    public ViewPager viewPager;
+    public RadioGroup radioGroup;
+    private int index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +53,23 @@ public class MainActivity extends AutoLayoutActivity {
                 for (int i = 0; i < radioGroup.getChildCount(); i++) {
                     RadioButton radioButton = (RadioButton) radioGroup.getChildAt(i);
                     if (radioButton.getId() == checkedId) {
-                        viewPager.setCurrentItem(i);
+                        if (checkedId == R.id.rb_cart && !MyApplication.intentFlag) {
+                            radioButton.setChecked(false);
+                            viewPager.setCurrentItem(index);
+                            RadioButton childAt = (RadioButton) radioGroup.getChildAt(index);
+                            childAt.setChecked(true);
+                            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                            startActivity(intent);
+                        } else {
+                            index = i;
+                            viewPager.setCurrentItem(i);
+                        }
                     }
+
                 }
             }
         });
+
     }
 
 

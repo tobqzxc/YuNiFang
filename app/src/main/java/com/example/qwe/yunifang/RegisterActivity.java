@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.qwe.yunifang.utlis.CommonUtils;
@@ -86,12 +87,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.tv_Deng:
                 View view = CommonUtils.inflate(R.layout.pop_layout);
+                RadioButton qq_land = (RadioButton) view.findViewById(R.id.qq_land);
                 PopupWindow popupWindow = new PopupWindow(view,LinearLayout.LayoutParams.MATCH_PARENT,180);
                 popupWindow.setFocusable(true);
                 popupWindow.setAnimationStyle(R.style.mypopwindow_anim_style);
                 popupWindow.setOutsideTouchable(true);
                 popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 popupWindow.showAtLocation(RegisterActivity.this.tv_Deng, Gravity.BOTTOM,0,0);
+                qq_land.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
                 break;
             case R.id.iv_locate:
                 finish();
